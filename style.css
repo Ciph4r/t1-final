@@ -1,0 +1,159 @@
+
+body{
+    display: grid;
+    /* grid-template-columns: 20% 60% 20%; */
+    grid-template-rows:  100px 85vh 150px;
+    margin: 0;
+    
+}
+
+
+.top-bar{
+    display: grid;
+    grid-template-columns: 20% 45% 35%;
+    background-color: aqua;
+    grid-row: 1/2;
+}
+.app{
+    
+    background-color: chartreuse;
+    grid-row: 2/3;
+    
+}
+
+ .footer{
+  
+    background-color: blueviolet;
+    grid-row: 3/4;
+    /* grid-column: 2/3; */  
+} 
+
+
+.logo{
+    grid-column: 1/2;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.login{
+    grid-column: 3/4;
+    
+
+}
+.login-area{
+    grid-column: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    
+}
+
+.login-button{
+    font-size: 30px;
+    background-color: crimson;
+    border: 1px black solid;
+    text-align: center;
+}
+.home-tittle{
+    text-align: center;
+    font-size: 50px;
+}
+.search-bar{
+    font-size: 150%;
+    
+}
+
+.search-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sign-up-box , .settings{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height:500px;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.submit{
+    height: 100px;
+    width: 300px;
+    align-self: center;
+    font-size: 150%;
+}
+
+.username-input,.password-input{
+    height: 50px;
+    font-size: 150%;
+}
+.setting-button{
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+/* .white-space{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-color: coral;
+    width: 5px;
+} */
