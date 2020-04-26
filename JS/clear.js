@@ -12,3 +12,10 @@ const clearApp = () => {
             select.firstChild.remove();
           }
     }
+
+    const clearTable = () => {
+      const select = document.querySelector('.table-data')
+      while(select.hasChildNodes()) {
+          select.firstChild.remove();
+        }
+    }

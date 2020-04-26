@@ -25,8 +25,15 @@ const createGuild = (owner ,guildName) => {
                 {playerName,
                 dkp: [],
                 addDkp: function (event , dkp , time){
-                    this.dkp.push(event , dkp , time)
-                }
+                    this.dkp.push([event , dkp , time])
+                },
+                totalDKP: function (){
+                    let total = 0
+                    for (const dkp of this.dkp){
+                        total += dkp[1]
+                    }
+                    return total
+                },
                 }
                 )
         }

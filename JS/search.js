@@ -1,23 +1,133 @@
 
-const searchBar = (area , size ,height)=>{
+const searchBar = (area)=>{
     const bar = document.createElement('input')
     const attach = document.querySelector(area)
-    bar.setAttribute('class','search-bar')
-    bar.style.width = size
-    bar.style.height = height
+    bar.setAttribute('class','search-bar form-control')
     attach.appendChild(bar)
 }
 
 const searchGuild = () => {
     const input = document.querySelector('.search-bar').value
-    data.guild.find(guild => guild.guildName ===input)
+    const search = data.guild.find(guild => guild.guildName ===input.toLowerCase())
+    const app = document.querySelector('.app')
+if (search){
+    clearApp()
+    bigbar()
+    const tittle = create('h1',search.guildName)
+    tittle.setAttribute('class','guildtittle')
+    app.appendChild(tittle)
+const creatediv4 = document.createElement('div')
+creatediv4.setAttribute('class' , 'container search-result')
+app.appendChild(creatediv4)
+
+const creatediv = document.createElement('div')
+creatediv.setAttribute('class' , 'container table-body')
+const creatediv2 = document.createElement('div')
+creatediv2.setAttribute('class' , 'row')
+const creatediv3 = document.createElement('div')
+creatediv3.setAttribute('class' , 'col-md-9')
+const createinput = document.createElement('input')
+createinput.setAttribute('class' , 'form-control')
+createinput.setAttribute('id' , 'system-search')
+createinput.setAttribute('placeholder' , 'Search for')
+const createtable = document.createElement('table')
+createtable.setAttribute('class', 'table table-list-search')
+creatediv4.appendChild(creatediv)
+creatediv.appendChild(creatediv2)
+creatediv2.appendChild(creatediv3)
+creatediv3.appendChild(createinput)
+creatediv3.appendChild(createtable)
+
+
+
+
+
+const createthead = document.createElement('thead')
+createtable.appendChild(createthead)
+const createtr = document.createElement('tr')
+createthead.appendChild(createtr)
+const createth = document.createElement('th')
+const createth2 = document.createElement('th')
+
+createth.innerText = 'PLAYER NAME'
+createth2.innerText = 'TOTAL DKP'
+
+createtr.appendChild(createth)
+createtr.appendChild(createth2)
+
+const createtbody = document.createElement('tbody')
+createtbody.setAttribute('class', 'table-data')
+createtable.appendChild(createtbody)
+
+const showDkp = () => {
+    const targPLayer = search.players.find(player => player.playerName === event.target.className)
+    clearTable()
+    if (logIn && currentUser === search.owner){
+
+    }else{
+      const createh3 = document.createElement('h3')
+      createh3.innerHTML = 'Log In to edit DKP'
+      app.appendChild(createh3)
+        
+    }
+
+
+
+    tittle.innerText = targPLayer.playerName
+    creatediv4.setAttribute('class' , 'container search-result')
+    app.appendChild(creatediv4)
+    createth.innerText = 'EVENT'
+    createth2.innerText = 'DKP'
+    const createth3 = document.createElement('th')
+    createth3.innerText = 'TIME'
+    createtr.appendChild(createth3)
+    for (const dkp of targPLayer.dkp){
+        const createtr2 = document.createElement('tr')
+        const createtd = document.createElement('td')
+        const createtd2 = document.createElement('td')
+        const createtd3 = document.createElement('td')
+        createtd.innerText = dkp[0]
+        createtd2.innerText = dkp[1]
+        createtd3.innerText = dkp[2]
+        createtr2.appendChild(createtd)
+        createtr2.appendChild(createtd2)
+        createtr2.appendChild(createtd3)
+        createtbody.appendChild(createtr2)
+       
+    }
+}
+
+
+
+
+
+for (const player of search.players) {
+    console.log(player)
+    const createtr2 = document.createElement('tr')
+    const createtd = document.createElement('td')
+    const createtd2 = document.createElement('td')
+    createtd.setAttribute('class',player.playerName )
+    createtd2.setAttribute('class',player.playerName )
+    createtd.innerText = player.playerName
+    createtd2.innerText = player.totalDKP()
+    createtr2.appendChild(createtd)
+    createtr2.appendChild(createtd2)
+    createtbody.appendChild(createtr2)
+    createtd2.addEventListener('click' , showDkp)
+
+}
+
+}else{
+    clearApp()
+    app.appendChild(create('h1' , 'NOT FOUND'))
+    bigbar()
+    }  
+filter()
 }
 
 const searchPlayer = () => {
 
 }
-
-
 
 
 const dropDownMenu = (area) => {
