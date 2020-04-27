@@ -29,7 +29,7 @@ const signUpPage = ()=>{
     const createlabel = document.createElement('label')
     const createInput = document.createElement('input')
     createlabel.setAttribute('class' , 'text-info')
-    createlabel.innerText = 'Username:'
+    createlabel.innerText = 'Email:'
     createInput.setAttribute('class' , 'form-control username-input')
  
     createDiv4.appendChild(createlabel)
@@ -60,29 +60,14 @@ const signUpPage = ()=>{
 
 
 
-    // const app = document.querySelector('.app')
-    // const createDiv = document.createElement('div')
-    // createDiv.setAttribute('class' , 'sign-up-box')
-    // const createinput = document.createElement('input')
-    // createinput.setAttribute('class' , 'username-input')
-    // const createinput2 = document.createElement('input')
-    // createinput2.setAttribute('class' , 'password-input')
-    // createinput2.value = 'PASSWORD MUST BE 6 CHARACTERS OR MORE'
-    // const createButton = document.createElement('button')
-    // createButton.setAttribute('class', 'submit')
-    // createButton.innerText = 'SIGN UP'
-    // const createh1 = document.createElement('h1')
-    // const createh2 = document.createElement('h1')
-    // createh1.innerText = 'Email'
-    // createh2.innerText = 'Password'
-    // app.appendChild(createDiv)
-    // createDiv.appendChild(createh1)
-    // createDiv.appendChild(createinput)
-    // createDiv.appendChild(createh2)
-    // createDiv.appendChild(createinput2)
-    // createDiv.appendChild(createButton)
 
     const signUp = () =>{
+        
+        if (data.users.find(x => x.userName === createInput.value)){
+            alert('User Names Taken')
+        }else{
+
+
         if (createInput.value.includes('@') && createInput.value.toLowerCase().includes('.com')){
             if(createInput2.value.length > 6){
         data.users.push(createUser(createInput.value[0].toUpperCase()+createInput.value.slice(1).toLowerCase() , createInput2.value))
@@ -99,6 +84,7 @@ const signUpPage = ()=>{
         }else {
             alert("Input a valid E-MAIL");
         }
+    }
     }
     createButton.addEventListener('click',signUp )
 }

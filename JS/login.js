@@ -55,7 +55,7 @@ const loginPage = ()=>{
     createDiv6.appendChild(createButton)
 
     createInput.value = 'david@gmail.com'
-    createInput2.value = 'sayian'
+    createInput2.value = '123456'
     
 
     

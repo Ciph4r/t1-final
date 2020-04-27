@@ -1,9 +1,14 @@
 
+html{
+    background-color: rgb(214, 213, 213);
+}
 body{
+    background-color: rgb(214, 213, 213);
     display: grid;
     /* grid-template-columns: 20% 60% 20%; */
-    grid-template-rows:  100px 86vh 125px;
+    grid-template-rows:  100px 100% 125px;
     margin: 0;
+    
     
 }
 
@@ -11,23 +16,28 @@ body{
 .top-bar{
     display: grid;
     grid-template-columns: 20% 45% 35%;
-    background-color: aqua;
+    background-color: rgb(148, 147, 147);
     grid-row: 1/2;
 }
 .app{
-    display: grid;
-    background-color: chartreuse;
+    display: flex;
+    background-color: white;
     grid-row: 2/3;
     align-items: center;
-    grid-template-rows: 1fr 1fr 3fr 15fr;
+    flex-direction: column;
+    justify-content: space-around;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
     
 }
 
  .footer{
-  
-    background-color: blueviolet;
+    display: grid;
+    
+    background-color: rgb(148, 147, 147);
     grid-row: 3/4;
     /* grid-column: 2/3; */  
+    justify-items: center;
+    
 } 
 
 
@@ -40,9 +50,8 @@ body{
 
 .login{
     grid-column: 3/4;
-    
-
 }
+
 .login-area{
     grid-column: 3/4;
     display: grid;
@@ -53,13 +62,15 @@ body{
 
 .login-button{
     font-size: 30px;
-    background-color: crimson;
+    border: none;
+    background-color: rgb(148, 147, 147);
     
     text-align: center;
 }
 .home-tittle{
     text-align: center;
     font-size: 50px;
+    color: white;
 }
 .search-bar{
     height: 50px;
@@ -76,9 +87,8 @@ body{
     justify-items: center;
     display: flex;
     flex-direction: row;
-    height: 50px;
     width: 80%;
-    
+    height: 150px;
 }
 
 
@@ -95,7 +105,8 @@ body{
 }
 
 .search-result{
-    
+   
+    align-self: flex-start;
 }
 
 .table-body{
@@ -108,10 +119,10 @@ body{
 }
 h3{
     text-align: center;
-    color: crimson;
+   
 }
 
-.adddkp{
+.adddkp , .addplayer{
     display: flex;
     justify-self: center;
     width: 50%;
@@ -132,7 +143,11 @@ h3{
 
 
 
-
+.login-button:hover {
+    background-color: rgb(163, 162, 162);
+    cursor:pointer;
+    color: white;
+  }
 
 
 
@@ -141,7 +156,7 @@ h3{
 
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: rgb(148, 147, 147);
     color: white;
     height: 50px;
     
@@ -178,12 +193,15 @@ h3{
 
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .dropdown:hover .dropbtn {background-color: rgb(163, 162, 162);}
 
 .row{
     
 }
-  .col-md-9{
+.col-md-9{
+    margin-left: 140px;
+    margin-bottom: 600px;
+    background-color: rgb(214, 213, 213);
     
 }
 h1{

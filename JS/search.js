@@ -16,6 +16,51 @@ if (search){
     const tittle = create('h1',search.guildName)
     tittle.setAttribute('class','guildtittle')
     app.appendChild(tittle)
+
+if (logIn && currentUser === search.owner){
+    const adddplayer = () => {
+        search.addPlayer(playerInput.value)
+        clearTable()
+
+
+for (const player of search.players) {
+    console.log(player)
+    const createtr2 = document.createElement('tr')
+    const createtd = document.createElement('td')
+    const createtd2 = document.createElement('td')
+    createtd.setAttribute('class',player.playerName )
+    createtd2.setAttribute('class',player.playerName )
+    createtd.innerText = player.playerName
+    createtd2.innerText = player.totalDKP()
+    createtr2.appendChild(createtd)
+    createtr2.appendChild(createtd2)
+    createtbody.appendChild(createtr2)
+    createtd2.addEventListener('click' , showDkp)
+}
+
+        
+
+    }
+    const playerdiv = document.createElement('div')
+    playerdiv.setAttribute('class' , 'addplayer')
+    const playerInput = document.createElement('input')
+    playerInput.setAttribute('placeholder' , 'Player Name')
+    const addplayer = document.createElement('button')
+    addplayer.setAttribute('class' , 'addplayer-button')
+    addplayer.innerHTML = 'Add'
+    playerInput.setAttribute('class','form-control playerInput')
+    app.appendChild(playerdiv)
+    playerdiv.appendChild(playerInput)
+    playerdiv.appendChild(addplayer)
+    addplayer.addEventListener('click' , adddplayer)
+}else{
+  const createh3 = document.createElement('h3')
+  createh3.setAttribute('class' , 'logwarn')
+  createh3.innerHTML = 'Log In to Add Player'
+  app.appendChild(createh3)
+}
+
+
 const creatediv4 = document.createElement('div')
 creatediv4.setAttribute('class' , 'container search-result')
 app.appendChild(creatediv4)
@@ -66,6 +111,11 @@ const refresh = () =>{
 
 const showDkp = () => {
     const targPLayer = search.players.find(player => player.playerName === event.target.className)
+    const tarsec = document.querySelector('.addplayer')
+    const tarh3 = document.querySelector('.logwarn')
+    if(tarh3){tarh3.remove()}
+    if(tarsec){tarsec.remove()}
+
     clearTable()
     if (logIn && currentUser === search.owner){
         const adddkps = () => {
@@ -84,7 +134,7 @@ const showDkp = () => {
                 createtr2.appendChild(createtd3)
                 createtbody.appendChild(createtr2)
                
-            }0
+            }
         }
         const dkpdiv = document.createElement('div')
         dkpdiv.setAttribute('class' , 'adddkp')
