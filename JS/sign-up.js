@@ -2,11 +2,9 @@
 const signUpPage = ()=>{
 
     clearApp()
+    bigbar()
 
 
-
-
-    clearApp()
     const app = document.querySelector('.app')
     const createDiv = document.createElement('div')
     createDiv.setAttribute('class' , 'sign-up-box container')

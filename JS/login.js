@@ -1,5 +1,6 @@
 const loginPage = ()=>{
     clearApp()
+    bigbar()
     const app = document.querySelector('.app')
     const createDiv = document.createElement('div')
     createDiv.setAttribute('class' , 'sign-up-box container')
@@ -52,32 +53,12 @@ const loginPage = ()=>{
     createButton.setAttribute('class' , 'btn btn-info btn-md submit')
     createButton.setAttribute('value' , 'submit')
     createDiv6.appendChild(createButton)
+
+    createInput.value = 'david@gmail.com'
+    createInput2.value = 'sayian'
     
 
     
-    // const app = document.querySelector('.app')
-    // const createDiv = document.createElement('div')
-    // createDiv.setAttribute('class' , 'sign-up-box ')
-    // const createinput = document.createElement('input')
-    // createinput.setAttribute('class' , 'username-input')
-
-
-    // const createinput2 = document.createElement('input')
-    // createinput2.setAttribute('class' , 'password-input')
-    // createinput2.value = 'PASSWORD MUST BE 6 CHARACTERS OR MORE'
-    // const createButton = document.createElement('button')
-    // createButton.setAttribute('class', 'submit')
-    // createButton.innerText = 'Log In'
-    // const createh1 = document.createElement('h1')
-    // const createh2 = document.createElement('h1')
-    // createh1.innerText = 'Email'
-    // createh2.innerText = 'Password'
-    // app.appendChild(createDiv)
-    // createDiv.appendChild(createh1)
-    // createDiv.appendChild(createinput)
-    // createDiv.appendChild(createh2)
-    // createDiv.appendChild(createinput2)
-    // createDiv.appendChild(createButton)
 
     const login = () =>{
         const userMatch =data.users.find(user => user.userName === createInput.value[0].toUpperCase()+createInput.value.slice(1).toLowerCase())

@@ -1,5 +1,5 @@
 data.users.push(createUser('David@gmail.com' , 'sayian'))
-
+data.users.push(createUser('Colin@gmail.com' , '123456'))
 data.guild.push(createGuild('David@gmail.com','1'))
 data.guild.push(createGuild('David@gmail.com','death'))
 data.guild.push(createGuild('David@gmail.com','angel'))
@@ -41,6 +41,18 @@ bigbar()
 
 
 console.log(data)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

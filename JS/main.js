@@ -1,8 +1,8 @@
 let logIn = true
-let currentUser =''
+let currentUser ='David@gmail.com'
 const data = {
     users: [],
-    guild : []
+    guild: []
 }
 
 

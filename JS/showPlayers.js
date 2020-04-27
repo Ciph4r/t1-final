@@ -1,25 +1,14 @@
-
-const searchBar = (area)=>{
-    const bar = document.createElement('input')
-    const attach = document.querySelector(area)
-    bar.setAttribute('class','search-bar form-control')
-    attach.appendChild(bar)
-}
-
-const searchGuild = () => {
-    const input = document.querySelector('.search-bar').value
-    const search = data.guild.find(guild => guild.guildName ===input.toLowerCase())
+const showPlayers = () => {
+clearApp()
+bigbar()
     const app = document.querySelector('.app')
-if (search){
-    clearApp()
-    bigbar()
+    const search = data.guild.find(x => x.guildName === event.target.innerText)
     const tittle = create('h1',search.guildName)
     tittle.setAttribute('class','guildtittle')
     app.appendChild(tittle)
-const creatediv4 = document.createElement('div')
-creatediv4.setAttribute('class' , 'container search-result')
-app.appendChild(creatediv4)
-
+    const creatediv4 = document.createElement('div')
+    creatediv4.setAttribute('class' , 'container search-result')
+    app.appendChild(creatediv4)
 const creatediv = document.createElement('div')
 creatediv.setAttribute('class' , 'container table-body')
 const creatediv2 = document.createElement('div')
@@ -159,51 +148,4 @@ for (const player of search.players) {
 
 }
 
-}else{
-    clearApp()
-    app.appendChild(create('h1' , 'NOT FOUND'))
-    bigbar()
-    }  
-filter()
 }
-
-const searchPlayer = () => {
-
-}
-
-
-const dropDownMenu = (area) => {
-    const attach = document.querySelector(area)
-    const create1 = document.createElement('div')
-    create1.setAttribute('class' ,"dropdown")
-    const create2 = document.createElement('button')
-    create2.setAttribute('class' ,"dropbtn")
-    create2.innerText = 'Search Options'
-    const create3 = document.createElement('div')
-    create3.setAttribute('class' ,'dropdown-content')
-    const create4= document.createElement('a')
-    create4.setAttribute('class' , 'searchGuild')
-    create4.innerText = 'Guild'
-    const create5 = document.createElement('a')
-    create4.setAttribute('class' , 'searchPlayers')
-    create5.innerText = 'Player'
-  
-
-create4.addEventListener('click', searchGuild)
-
-
-    create3.appendChild(create4)
-    create3.appendChild(create5)
-    create1.appendChild(create2)
-    create1.appendChild(create3)
-    attach.appendChild(create1)
-}
-
-
-
-
-
-
-
-
-

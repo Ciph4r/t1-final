@@ -2,19 +2,24 @@ const loggedIn = () => {
 
 const logged = () => {
     clearApp()
+    bigbar()
     const app = document.querySelector('.app')
     const createDiv = document.createElement('div')
     createDiv.setAttribute('class' , 'settings')
     app.appendChild(createDiv)
     const createButton = document.createElement('button')
     const createButton2 = document.createElement('button')
-    createButton.innerText = 'Change Password'
-    createButton2.innerText = 'In Dev'
-    createButton.setAttribute('class', 'setting-button')
-    createButton2.setAttribute('class', 'setting-button')
+    const createButton3 = document.createElement('button')
+    createButton.innerText = 'Create New Guild'
+    createButton2.innerText = 'Change Password'
+    createButton3.innerText = 'In Dev'
+    createButton.setAttribute('class', 'setting-button create-guild')
+    createButton2.setAttribute('class', 'setting-button Change-pw')
+    createButton3.setAttribute('class', 'setting-button')
     createDiv.appendChild(createButton)
     createDiv.appendChild(createButton2)
-
+    createDiv.appendChild(createButton3)
+    createButton.addEventListener('click', createguild)
 
 }
 
