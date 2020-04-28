@@ -62,8 +62,7 @@ const signUpPage = ()=>{
 
 
     const signUp = () =>{
-        
-        if (data.users.find(x => x.userName === createInput.value)){
+        if (data.users.find(x => x.userName.toLowerCase() === createInput.value.toLowerCase())){
             alert('User Names Taken')
         }else{
 
@@ -85,6 +84,9 @@ const signUpPage = ()=>{
             alert("Input a valid E-MAIL");
         }
     }
+    /////////////
+    updateData()
+    //////////////
     }
     createButton.addEventListener('click',signUp )
 }
