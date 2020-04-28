@@ -73,7 +73,12 @@ bigbar()
 
 
 
+
 console.log(data)
+
+
+
+
 
 
 

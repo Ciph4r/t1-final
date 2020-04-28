@@ -196,14 +196,20 @@ h3{
   .dropdown:hover .dropbtn {background-color: rgb(163, 162, 162);}
 
 .row{
-    
+ 
+    justify-content: center;
 }
 .col-md-9{
-    margin-left: 140px;
-    margin-bottom: 600px;
     background-color: rgb(214, 213, 213);
-    
+
 }
 h1{
     text-align: center;
+}
+.linkstuff:hover{
+    color: white;
+    background-color: rgb(163, 162, 162);
+}
+.linkstuff{
+    background-color: rgb(148, 147, 147);
 }

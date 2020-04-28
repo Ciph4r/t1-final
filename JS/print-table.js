@@ -26,7 +26,7 @@ const printTable = (array , data2, th) => {
     const createtr = document.createElement('tr')
     createthead.appendChild(createtr)
     const createth = document.createElement('th')
-    createth.innerText = th
+    createth.innerText = th[0].toUpperCase()+th.slice(1)
     createtr.appendChild(createth)
     const createtbody = document.createElement('tbody')
     createtbody.setAttribute('class', 'table-data')
@@ -34,7 +34,8 @@ const printTable = (array , data2, th) => {
     for (const data of array){
         const createtr2 = document.createElement('tr')
         const createtd = document.createElement('td')
-        createtd.innerText = data[data2]
+        createtd.setAttribute('class' , 'linkstuff')
+        createtd.innerText = data[data2][0].toUpperCase() + data[data2].slice(1).toLowerCase()
         createtr2.appendChild(createtd)
         createtbody.appendChild(createtr2)
         createtd.addEventListener('click' , showPlayers)

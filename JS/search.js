@@ -29,7 +29,7 @@ for (const player of search.players) {
     const createtd = document.createElement('td')
     const createtd2 = document.createElement('td')
     createtd.setAttribute('class',player.playerName )
-    createtd2.setAttribute('class',player.playerName )
+    createtd2.setAttribute('class',`${player.playerName} linkstuff` )
     createtd.innerText = player.playerName
     createtd2.innerText = player.totalDKP()
     createtr2.appendChild(createtd)
@@ -110,7 +110,7 @@ const refresh = () =>{
 
 
 const showDkp = () => {
-    const targPLayer = search.players.find(player => player.playerName === event.target.className)
+    const targPLayer = search.players.find(player => player.playerName === event.target.className.split(' ')[0])
     const tarsec = document.querySelector('.addplayer')
     const tarh3 = document.querySelector('.logwarn')
     if(tarh3){tarh3.remove()}
@@ -164,7 +164,7 @@ const showDkp = () => {
     }
 
 
-
+    
     tittle.innerText = targPLayer.playerName
     creatediv4.setAttribute('class' , 'container search-result')
     app.appendChild(creatediv4)
@@ -199,7 +199,7 @@ for (const player of search.players) {
     const createtd = document.createElement('td')
     const createtd2 = document.createElement('td')
     createtd.setAttribute('class',player.playerName )
-    createtd2.setAttribute('class',player.playerName )
+    createtd2.setAttribute('class',`${player.playerName} linkstuff` )
     createtd.innerText = player.playerName
     createtd2.innerText = player.totalDKP()
     createtr2.appendChild(createtd)

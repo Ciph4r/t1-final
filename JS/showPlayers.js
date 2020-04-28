@@ -2,7 +2,7 @@ const showPlayers = () => {
 clearApp()
 bigbar()
     const app = document.querySelector('.app')
-    const search = data.guild.find(x => x.guildName === event.target.innerText)
+    const search = data.guild.find(x => x.guildName === event.target.innerText.toLowerCase())
     const tittle = create('h1',search.guildName)
     tittle.setAttribute('class','guildtittle')
     app.appendChild(tittle)
@@ -24,7 +24,7 @@ for (const player of search.players) {
     const createtd = document.createElement('td')
     const createtd2 = document.createElement('td')
     createtd.setAttribute('class',player.playerName )
-    createtd2.setAttribute('class',player.playerName )
+    createtd2.setAttribute('class',`${player.playerName} linkstuff` )
     createtd.innerText = player.playerName
     createtd2.innerText = player.totalDKP()
     createtr2.appendChild(createtd)
@@ -107,7 +107,7 @@ const refresh = () =>{
 
 
 const showDkp = () => {
-    const targPLayer = search.players.find(player => player.playerName === event.target.className)
+    const targPLayer = search.players.find(player => player.playerName === event.target.className.split(' ')[0])
 
     const tarsec = document.querySelector('.addplayer')
     const tarh3 = document.querySelector('.logwarn')
@@ -198,7 +198,7 @@ for (const player of search.players) {
     const createtd = document.createElement('td')
     const createtd2 = document.createElement('td')
     createtd.setAttribute('class',player.playerName )
-    createtd2.setAttribute('class',player.playerName )
+    createtd2.setAttribute('class',`${player.playerName} linkstuff`)
     createtd.innerText = player.playerName
     createtd2.innerText = player.totalDKP()
     createtr2.appendChild(createtd)
