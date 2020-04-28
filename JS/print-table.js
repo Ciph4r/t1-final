@@ -51,6 +51,7 @@ const printTD = (array , data2 ,func) => {
     for (const data of array){
         const createtr2 = document.createElement('tr')
         const createtd = document.createElement('td')
+        createtd.setAttribute('class' , 'linkstuff')
         createtd.innerText = data[data2]
         createtr2.appendChild(createtd)
         targtd.appendChild(createtr2)

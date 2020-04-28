@@ -1,6 +1,6 @@
 let logIn = false
 let currentUser =''
-const data = {
+let data = {
     users: [],
     guild: []
 }

@@ -74,6 +74,7 @@ bigbar()
 
 
 
+
 console.log(data)
 
 

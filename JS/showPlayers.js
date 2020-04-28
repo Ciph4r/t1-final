@@ -33,7 +33,7 @@ for (const player of search.players) {
     createtd2.addEventListener('click' , showDkp)
 }
 ////////////////////////////////
-        
+        updateData()
 
     }
     const playerdiv = document.createElement('div')
@@ -134,6 +134,7 @@ const showDkp = () => {
                 createtbody.appendChild(createtr2)
                
             }
+            updateData()
         }
         const dkpdiv = document.createElement('div')
         dkpdiv.setAttribute('class' , 'adddkp')

@@ -59,7 +59,7 @@ const addGuild = () => {
     const dataMatch = data.guild.filter(x => x.owner === currentUser)
     clearTable()
     printTD(dataMatch ,'guildName' , showPlayers)
-    console.log(showPlayers)
+    updateData()
     
 }
 

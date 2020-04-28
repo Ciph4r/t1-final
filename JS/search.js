@@ -21,7 +21,7 @@ if (logIn && currentUser === search.owner){
     const adddplayer = () => {
         search.addPlayer(playerInput.value)
         clearTable()
-
+        updateData()
 
 for (const player of search.players) {
     console.log(player)
@@ -135,6 +135,7 @@ const showDkp = () => {
                 createtbody.appendChild(createtr2)
                
             }
+            updateData()
         }
         const dkpdiv = document.createElement('div')
         dkpdiv.setAttribute('class' , 'adddkp')
