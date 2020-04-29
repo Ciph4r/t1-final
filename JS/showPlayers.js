@@ -22,7 +22,7 @@ for (const player of search.players) {
     const createtd2 = document.createElement('td')
     createtd.setAttribute('class',player.playerName )
     createtd2.setAttribute('class',`${player.playerName} linkstuff` )
-    createtd.innerText = 'player.playerName'
+    createtd.innerText = player.playerName
     createtd2.innerText = player.totalDKP()
     createtr2.appendChild(createtd)
     createtr2.appendChild(createtd2)
