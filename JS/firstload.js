@@ -4,50 +4,27 @@ data.users.push(createUser('Colin@gmail.com' , '123456'))
 data.guild.push(createGuild('David@gmail.com','crew'))
 data.guild.push(createGuild('David@gmail.com','death'))
 data.guild.push(createGuild('David@gmail.com','angel'))
+
 data.guild[0].addPlayer('Dave')
-data.guild[0].addPlayer('Dave2')
-data.guild[0].addPlayer('Dave3')
-data.guild[0].addPlayer('Dave4')
-data.guild[0].addPlayer('Dave5')
-data.guild[0].addPlayer('Dave6')
+data.guild[0].addPlayer('PWNFace')
+data.guild[0].addPlayer('NOOBMASTER')
+data.guild[0].addPlayer('180NoScope')
+data.guild[0].addPlayer('GGNORE')
+data.guild[0].addPlayer('ScrubDucky')
+data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
+data.guild[0].players[0].addDkp('killed dragon' , 100, 'May 20 2020 05:22 PM')
 data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
 data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
 data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
 data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
 data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
 data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-data.guild[0].players[0].addDkp('killed dragon' , 100, 'today')
-
-
-
-data.guild.push(createGuild('David2','dbz'))
-
-data.guild[1].addPlayer('dave')
 data.guild[0].players[0].addDkp('killed dragon' , 200, 'yesterday')
+
+
+
+data.guild.push(createGuild('MarkDown','dbz'))
+data.guild[1].addPlayer('dave')
 
 
 

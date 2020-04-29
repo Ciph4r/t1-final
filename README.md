@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+## Welcome to DKP TRAKCER
 
-You can use the [editor on GitHub](https://github.com/Ciph4r/t1-final/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+#### Dkp tracker is a simple to use easy app to keep track of all your dkps and guilds event. The storage that is being use is local Storage and some predefined data is already loaded
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Create Account
+#### To create a account the user login info must be a email address and password must contain or more character.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#### Predefined Data
+##### Guilds
+###### Crew
+###### Death
+###### Angel
+##### Users
+###### David@gmail.com PW: 123456
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+### Technology Stacked Used
 
-1. Numbered
-2. List
+#### Html
+#### JavaScript
+#### Json
+#### css
+#### GitHub
 
-**Bold** and _Italic_ and `Code` text
+### current version
+#### Alpa 
 
-[Link](url) and ![Image](src)
-```
+### Contack
+#### David.lau@codeimmmersives.com
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Ciph4r/t1-final/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
