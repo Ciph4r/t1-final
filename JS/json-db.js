@@ -13,14 +13,7 @@ const updateData = () => {
         guild: []
     }
     for (const data1 of oldData.users){
-        const newdata ={
-            userName: data1.userName,
-            passWord: data1.passWord,
-            changePassword: function (password){
-                this.passWord = password
-            }    
-        }
-        data.users.push(newdata) 
+        data.users.push({...createUser(),...data1})
     }
     for (const guild of oldData.guild){
         let players = createGuild(guild.owner, guild.guildName)
@@ -55,17 +48,7 @@ const updateData = () => {
                 guild: []
             }
             for (const data1 of oldData.users){
-                console.log(data1)
-                const newdata ={
-                    userName: data1.userName,
-                    passWord: data1.passWord,
-                    changePassword: function (password){
-                        this.passWord = password
-                    }    
-                }
-                data.users.push(newdata)
-                
-            
+                data.users.push({...createUser(),...data1})
             }
             for (const guild of oldData.guild){
                 let players = createGuild(guild.owner, guild.guildName)

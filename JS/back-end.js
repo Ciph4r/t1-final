@@ -1,16 +1,3 @@
-const login = (username , password) =>{
-    const checkUser = data.users.find(user => user.userName === username)
-   
-       if (checkUser){
-           if(checkUser.passWord === password){
-           logIn = true
-           currentUser = checkUser.userName
-           }
-       }
-   }
-   
-
-
 
 
 
@@ -46,9 +33,20 @@ const createUser = (userName , passWord) =>{
     return {
         userName,
         passWord,
-        changePassword: function (password){
+        inBox:[],
+        changePassword: function(password){
             this.passWord = password
+        },
+        sendApplication: function(application){
+            this.inBox.push(application)
         }
     }
 
+}
+
+const application = (playerName,guild) => {
+    return {
+        playerName,
+        guild
+    }
 }

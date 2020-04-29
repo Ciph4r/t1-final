@@ -1,6 +1,6 @@
 ## Welcome to DKP TRAKCER
 
-#### Dkp tracker is a simple to use easy app to keep track of all your dkps and guilds event. The storage that is being use is local Storage and some predefined data is already loaded
+#### Dkp tracker is a simple to use easy app to keep track of all your Guilds, Player, dkps and those big events. The storage that is being use is local Storage and some predefined data is already loaded
 
 ### Create Account
 #### To create a account the user login info must be a email address and password must contain or more character.
@@ -11,13 +11,11 @@
 ###### Crew
 ###### Death
 ###### Angel
+
 ##### Users
-###### David@gmail.com PW: 123456
+###### USerName: David@gmail.com PW: 123456
 
-
-
-### Technology Stacked Used
-
+### Technology Stacked 
 #### Html
 #### JavaScript
 #### Json
@@ -27,6 +25,6 @@
 ### current version
 #### Alpa 
 
-### Contack
+### Contact
 #### David.lau@codeimmmersives.com
 

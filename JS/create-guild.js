@@ -36,11 +36,11 @@ createButton.setAttribute('class' , 'btn btn-info btn-md submit')
 createButton.setAttribute('value' , 'submit')
 createDiv6.appendChild(createButton)
 
-const h3 = document.createElement('h3')
-h3.innerText = 'Guilds'
-app.appendChild(h3)
+// const h3 = document.createElement('h3')
+// h3.innerText = 'Guilds'
+// app.appendChild(h3)
 const dataMatch = data.guild.filter(x => x.owner === currentUser)
-printTable(dataMatch , 'guildName' , 'goku')
+printTable(dataMatch , 'guildName' , 'Guilds')
 }
 
 

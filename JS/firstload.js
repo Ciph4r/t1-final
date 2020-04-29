@@ -4,8 +4,11 @@ data.users.push(createUser('Colin@gmail.com' , '123456'))
 data.guild.push(createGuild('David@gmail.com','crew'))
 data.guild.push(createGuild('David@gmail.com','death'))
 data.guild.push(createGuild('David@gmail.com','angel'))
+data.guild.push(createGuild('Colin@gmail.com','Newbs'))
+data.guild.push(createGuild('Colin@gmail.com','Markdown'))
 
-data.guild[0].addPlayer('Dave')
+
+data.guild[0].addPlayer('SaladFingers')
 data.guild[0].addPlayer('PWNFace')
 data.guild[0].addPlayer('NOOBMASTER')
 data.guild[0].addPlayer('180NoScope')
@@ -23,12 +26,12 @@ data.guild[0].players[0].addDkp('killed dragon' , 200, 'yesterday')
 
 
 
-data.guild.push(createGuild('MarkDown','dbz'))
 data.guild[1].addPlayer('dave')
 
 
 
 filter()
+
 
 
 
@@ -45,6 +48,10 @@ searchBar('.search-box')
 }
 
 bigbar()
+
+
+
+
 
 
 

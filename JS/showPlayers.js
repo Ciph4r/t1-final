@@ -2,7 +2,7 @@ const showPlayers = () => {
 clearApp()
 bigbar()
     const app = document.querySelector('.app')
-    const search = data.guild.find(x => x.guildName === event.target.innerText.toLowerCase())
+    const search = data.guild.find(x => x.guildName.toLowerCase() === event.target.innerText.toLowerCase())
     const tittle = create('h1',search.guildName)
     tittle.setAttribute('class','guildtittle')
     app.appendChild(tittle)
@@ -10,29 +10,25 @@ bigbar()
 
 
 
-
-////////////////////////////////////////////////
 if (logIn && currentUser === search.owner){
     const adddplayer = () => {
         search.addPlayer(playerInput.value)
         clearTable()
-////////////////////////////
+
 
 for (const player of search.players) {
-    console.log(player)
     const createtr2 = document.createElement('tr')
     const createtd = document.createElement('td')
     const createtd2 = document.createElement('td')
     createtd.setAttribute('class',player.playerName )
     createtd2.setAttribute('class',`${player.playerName} linkstuff` )
-    createtd.innerText = player.playerName
+    createtd.innerText = 'player.playerName'
     createtd2.innerText = player.totalDKP()
     createtr2.appendChild(createtd)
     createtr2.appendChild(createtd2)
     createtbody.appendChild(createtr2)
     createtd2.addEventListener('click' , showDkp)
 }
-////////////////////////////////
         updateData()
 
     }
@@ -48,14 +44,35 @@ for (const player of search.players) {
     playerdiv.appendChild(playerInput)
     playerdiv.appendChild(addplayer)
     addplayer.addEventListener('click' , adddplayer)
-}else{
+}
+/////////////////////////////////////////////
+
+if (logIn && currentUser !==search.owner){
+    const apply = () => {
+        const targowner = data.users.find( x => x.userName === search.owner)
+        const guildname = document.querySelector('.guildtittle')
+            targowner.sendApplication(application(currentUser,guildname.innerHTML))
+            updateData()
+            clearApp()
+            bigbar()
+            const createh2 = document.createElement('h1')
+            createh2.innerText = 'You Have Applied'
+            app.appendChild(createh2)
+            
+    }
+    const appButton = document.createElement('button')
+    appButton.setAttribute('class' , 'application')
+    appButton.innerText = 'Apply'
+    app.appendChild(appButton)
+    appButton.addEventListener('click' , apply)
+}
+///////////////////////////////////////////
+if (!logIn && currentUser !== search.owner){
   const createh3 = document.createElement('h3')
   createh3.innerHTML = 'Log In to Add Player'
   app.appendChild(createh3)
 }
 
-
-////////////////////////////////////////////////////////
 
 
     
@@ -108,9 +125,10 @@ const refresh = () =>{
 
 const showDkp = () => {
     const targPLayer = search.players.find(player => player.playerName === event.target.className.split(' ')[0])
-
+    const targButton = document.querySelector('.application')
+    if(targButton) {targButton.remove()}
     const tarsec = document.querySelector('.addplayer')
-    const tarh3 = document.querySelector('.logwarn')
+    const tarh3 = document.querySelector('h3')
     if(tarh3){tarh3.remove()}
     if(tarsec){tarsec.remove()}
 
@@ -164,8 +182,8 @@ const showDkp = () => {
     }
 
 
-
-    tittle.innerText = targPLayer.playerName
+    
+    tittle.innerText = event.target.className.split(' ')[0]
     creatediv4.setAttribute('class' , 'container search-result')
     app.appendChild(creatediv4)
     createth.innerText = 'EVENT'

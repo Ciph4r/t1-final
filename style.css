@@ -127,12 +127,10 @@ h3{
     width: 50%;
 }
 
-/* .submit{
-    height: 100px;
-    width: 300px;
-    align-self: center;
-    font-size: 150%;
-} */
+.application{
+    width: 100px;
+    height: 30px;
+}
 
 
 .setting-button{

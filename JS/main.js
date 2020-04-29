@@ -5,7 +5,6 @@ let data = {
     guild: []
 }
 
-const data2 = [1]
 
 
 

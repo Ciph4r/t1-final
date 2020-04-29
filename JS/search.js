@@ -38,8 +38,7 @@ for (const player of search.players) {
     createtd2.addEventListener('click' , showDkp)
 }
 
-        
-
+    
     }
     const playerdiv = document.createElement('div')
     playerdiv.setAttribute('class' , 'addplayer')
@@ -53,7 +52,31 @@ for (const player of search.players) {
     playerdiv.appendChild(playerInput)
     playerdiv.appendChild(addplayer)
     addplayer.addEventListener('click' , adddplayer)
-}else{
+}
+
+
+if (logIn && currentUser !==search.owner){
+    const apply = () => {
+        const targowner = data.users.find( x => x.userName === search.owner)
+        const guildname = document.querySelector('.guildtittle')
+            targowner.sendApplication(application(currentUser,guildname.innerHTML))
+            updateData()
+            clearApp()
+            bigbar()
+            const createh2 = document.createElement('h1')
+            createh2.innerText = 'You Have Applied'
+            app.appendChild(createh2)
+            
+    }
+    const appButton = document.createElement('button')
+    appButton.setAttribute('class' , 'application')
+    appButton.innerText = 'Apply'
+    app.appendChild(appButton)
+    appButton.addEventListener('click' , apply)
+}
+
+
+else{
   const createh3 = document.createElement('h3')
   createh3.setAttribute('class' , 'logwarn')
   createh3.innerHTML = 'Log In to Add Player'
@@ -110,11 +133,14 @@ const refresh = () =>{
 
 
 const showDkp = () => {
+    const targButton = document.querySelector('.application')
+    if(targButton) {targButton.remove()}
     const targPLayer = search.players.find(player => player.playerName === event.target.className.split(' ')[0])
     const tarsec = document.querySelector('.addplayer')
     const tarh3 = document.querySelector('.logwarn')
     if(tarh3){tarh3.remove()}
     if(tarsec){tarsec.remove()}
+    
 
     clearTable()
     if (logIn && currentUser === search.owner){
@@ -222,6 +248,16 @@ const searchPlayer = () => {
 
 }
 
+const searchAll = () => {
+    clearApp()
+    bigbar()
+    const app = document.querySelector('.app')
+    const h3 = document.createElement('h3')
+    h3.innerText = 'Guilds'
+    app.appendChild(h3)
+    const dataMatch = data.guild
+    printTable(dataMatch , 'guildName' , 'Guilds')
+}
 
 const dropDownMenu = (area) => {
     const attach = document.querySelector(area)
@@ -235,16 +271,21 @@ const dropDownMenu = (area) => {
     const create4= document.createElement('a')
     create4.setAttribute('class' , 'searchGuild')
     create4.innerText = 'Guild'
+    const create7 = document.createElement('a')
+    create7.setAttribute('class' , 'allGuild')
+    create7.innerText = 'Show All Guild'
     const create5 = document.createElement('a')
-    create4.setAttribute('class' , 'searchPlayers')
+    create5.setAttribute('class' , 'searchPlayers')
     create5.innerText = 'Player'
   
 
 create4.addEventListener('click', searchGuild)
+create7.addEventListener('click', searchAll)
 
 
     create3.appendChild(create4)
     create3.appendChild(create5)
+    create3.appendChild(create7)
     create1.appendChild(create2)
     create1.appendChild(create3)
     attach.appendChild(create1)
